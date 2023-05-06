@@ -2,8 +2,13 @@ server:
   port: 9900
 
 spring:
+  application:
+    name: config-service
   cloud:
     config:
       server:
         git:
           uri: https://github.com/iujisu/jisungmsa-config.git
+          #git repository 가 public 이 아니고 private 일때
+          #username: 
+          #password:
