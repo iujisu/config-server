@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: config-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 15672
+    username: guest
+    password: guest
+    
   cloud:
     config:
       server:
@@ -12,3 +18,12 @@ spring:
           #git repository 가 public 이 아니고 private 일때
           #username: 
           #password:
+encrypt:
+  key: APODNU3093r2rbjzxcn09u213asdhy08WRFH
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace ,buserefresh
+      
